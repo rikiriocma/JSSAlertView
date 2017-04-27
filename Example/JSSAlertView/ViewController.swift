@@ -102,10 +102,10 @@ class ViewController: UITableViewController {
 			alertview.setTextTheme(.light)
 		case 4:
 			let alertview = JSSAlertView().show(self,
-			                                    title: "Check it out",
+			                                    title: "Swift is using the type system and inferred module semantics",
 			                                    text: "This alert is using a custom font: Clear Sans to be specific")
-			alertview.setTitleFont("ClearSans-Light", fontHeight: 12)
-			alertview.setTextFont("TimesNewRomanPS-BoldMT", fontHeight: 30)
+			alertview.setTitleFont("ClearSans-Light", fontHeight: 18)
+			alertview.setTextFont("TimesNewRomanPS-BoldMT", fontHeight: 16)
 			alertview.setButtonFont("TimesNewRomanPS-BoldMT", fontHeight: 48)
 		case 5:
 			JSSAlertView().info(self,

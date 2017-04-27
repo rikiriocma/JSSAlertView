@@ -132,7 +132,9 @@ open class JSSAlertView: UIViewController {
 		// position the title
 		let titleString = titleLabel.text! as NSString
 		let titleAttr = [NSFontAttributeName: titleLabel.font!]
-		let titleSize = CGSize(width: contentWidth, height: 90)
+        let realSize = titleLabel.sizeThatFits(CGSize(width: contentWidth, height: CGFloat.greatestFiniteMagnitude))
+		//let titleSize = CGSize(width: contentWidth, height: 90)
+        let titleSize = CGSize(width: contentWidth, height: CGFloat(fmaxf(Float(90.0), Float(realSize.height))))
 		let titleRect = titleString.boundingRect(with: titleSize, options: .usesLineFragmentOrigin, attributes: titleAttr, context: nil)
 		yPos += padding
 		titleLabel.frame = CGRect(x: padding, y: yPos, width: alertWidth - (padding * 2), height: ceil(titleRect.height))
