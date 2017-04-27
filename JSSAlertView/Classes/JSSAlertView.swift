@@ -179,12 +179,14 @@ open class JSSAlertView: UIViewController {
 			}
 
 			// set button fonts
+            
 			if buttonLabel != nil {
 				buttonLabel.font = UIFont(name: buttonFont, size: 20)
 			}
 			if cancelButtonLabel != nil {
 				cancelButtonLabel.font = UIFont(name: buttonFont, size: 20)
 			}
+ 
 			yPos += buttonHeight
 		}else{
 			yPos += padding
@@ -499,11 +501,11 @@ extension JSSAlertView {
 	/// - Parameters:
 	///   - fontStr: name of font
 	///   - type: target to set font to e.g. title, text ...
-	func setFont(_ fontStr: String, type: FontType) {
+    func setFont(_ fontStr: String, type: FontType, height: CGFloat) {
 		switch type {
 		case .title:
 			self.titleFont = fontStr
-			if let font = UIFont(name: self.titleFont, size: 24) {
+			if let font = UIFont(name: self.titleFont, size: height) {
 				self.titleLabel.font = font
 			} else {
 				self.titleLabel.font = UIFont.systemFont(ofSize: 24)
@@ -511,7 +513,7 @@ extension JSSAlertView {
 		case .text:
 			if self.textView != nil {
 				self.textFont = fontStr
-				if let font = UIFont(name: self.textFont, size: 16) {
+				if let font = UIFont(name: self.textFont, size: height) {
 					self.textView.font = font
 				} else {
 					self.textView.font = UIFont.systemFont(ofSize: 16)
@@ -519,14 +521,14 @@ extension JSSAlertView {
 			}
 		case .button:
 			self.buttonFont = fontStr
-			if let font = UIFont(name: self.buttonFont, size: 24) {
+			if let font = UIFont(name: self.buttonFont, size: height) {
 				self.buttonLabel.font = font
 			} else {
 				self.buttonLabel.font = UIFont.systemFont(ofSize: 24)
 			}
         case .timer:
             self.timerFont = fontStr
-            if let font = UIFont(name: self.timerFont, size: 27) {
+            if let font = UIFont(name: self.timerFont, size: height) {
                 self.buttonLabel.font = font
             } else {
                 self.buttonLabel.font = UIFont.systemFont(ofSize: 27)

@@ -104,9 +104,9 @@ class ViewController: UITableViewController {
 			let alertview = JSSAlertView().show(self,
 			                                    title: "Check it out",
 			                                    text: "This alert is using a custom font: Clear Sans to be specific")
-			alertview.setTitleFont("ClearSans-Light")
-			alertview.setTextFont("ClearSans")
-			alertview.setButtonFont("ClearSans-Bold")
+			alertview.setTitleFont("ClearSans-Light", fontHeight: 12)
+			alertview.setTextFont("TimesNewRomanPS-BoldMT", fontHeight: 30)
+			alertview.setButtonFont("TimesNewRomanPS-BoldMT", fontHeight: 48)
 		case 5:
 			JSSAlertView().info(self,
 			                    title: "Heads up!",

@@ -39,30 +39,30 @@ open class JSSAlertViewResponder {
 	/// Sets Title Font
 	///
 	/// - Parameter fontStr: Font name
-	open func setTitleFont(_ fontStr: String) {
-		self.alertview.setFont(fontStr, type: .title)
+	open func setTitleFont(_ fontStr: String, fontHeight: CGFloat = 24) {
+		self.alertview.setFont(fontStr, type: .title, height: fontHeight)
 	}
     
 	/// Sets text font
 	///
 	/// - Parameter fontStr: Font name
-	open func setTextFont(_ fontStr: String) {
-		self.alertview.setFont(fontStr, type: .text)
+	open func setTextFont(_ fontStr: String, fontHeight: CGFloat = 16) {
+		self.alertview.setFont(fontStr, type: .text, height: fontHeight)
 	}
     
     /// Sets Timer font
     ///
     /// - Parameter fontStr: Font name
-    open func setTimerFont(_ fontStr: String) {
-        self.alertview.setFont(fontStr, type: .timer)
+    open func setTimerFont(_ fontStr: String, fontHeight: CGFloat = 24) {
+        self.alertview.setFont(fontStr, type: .timer, height: fontHeight)
     }
 
     
 	/// Sets button Font
 	///
 	/// - Parameter fontStr: Font name
-	open func setButtonFont(_ fontStr: String) {
-		self.alertview.setFont(fontStr, type: .button)
+	open func setButtonFont(_ fontStr: String, fontHeight: CGFloat = 27) {
+		self.alertview.setFont(fontStr, type: .button, height: fontHeight)
 	}
 
     
